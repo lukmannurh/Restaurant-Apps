@@ -1,0 +1,28 @@
+# This is a basic workflow that is manually triggered
+
+name: Continuous Integration
+ 
+on:
+  pull_request:
+    branches:
+      - main
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  test:
+    runs-on: ubuntu-latest
+ 
+    strategy:
+      matrix:
+        node-version: [14.x]
+ 
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Run Automated Test
+        run: |
+          npm install
+          npm run test
