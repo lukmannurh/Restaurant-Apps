@@ -42,7 +42,7 @@ const createRestaurantItemTemplate = restaurant => `
     <div class="restaurant-item">
         <div class="restaurant-item_header">
             <figure>
-                <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="Restaurant ${restaurant.name}, di kota ${restaurant.city}" class="restaurant-item_header_poster lazyload" />
+                <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="Restaurant ${restaurant.name}, di kota ${restaurant.city}" height="200px" class="restaurant-item_header_poster lazyload" />
                 <figcaption class="caption">${restaurant.city}</figcaption>
             </figure>
             <div class="restaurant-item_header_rating">
