@@ -4,7 +4,7 @@ const createRestaurantDetailTemplate = restaurant => `
     <div class="restaurant-detail">
         <div class="restaurant-item-detail">
             <h2 class="restaurant_title">Restaurant Detail</h2>
-            <img class="restaurant_poster lazyload" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="Restaurant ${restaurant.name}, di kota ${restaurant.city}" />
+            <img class="lazyload restaurant_poster" data-sizes="auto" data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="Restaurant ${restaurant.name}, di kota ${restaurant.city}" />
         </div>
         <div class="restaurant_info">
             <h3 class="restaurant_name">Restaurant Name</h3>
@@ -42,7 +42,7 @@ const createRestaurantItemTemplate = restaurant => `
     <div class="restaurant-item">
         <div class="restaurant-item_header">
             <figure>
-                <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="Restaurant ${restaurant.name}, di kota ${restaurant.city}" height="200px" class="restaurant-item_header_poster lazyload" />
+                <img data-sizes="auto" data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="Restaurant ${restaurant.name}, di kota ${restaurant.city}" height="200px" class="lazyload restaurant-item_header_poster" />
                 <figcaption class="caption">${restaurant.city}</figcaption>
             </figure>
             <div class="restaurant-item_header_rating">
